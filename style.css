@@ -1,0 +1,1118 @@
+/* =====================================================
+   EL RANXO
+   STYLE.CSS DEFINITIVO
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f0;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+    background: #0b0b0b;
+    color: white;
+    padding: 22px 20px;
+    text-align: center;
+    border-bottom: 1px solid #303030;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.logo strong {
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.header-subtitle {
+    margin-top: 7px;
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   BARRA FIJA
+   ===================================================== */
+
+.menu-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(10, 10, 10, .96);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #333;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 13px 18px;
+}
+
+.menu-nav-logo {
+    color: white;
+
+    font-size: 17px;
+    font-weight: 900;
+
+    letter-spacing: -.5px;
+
+    white-space: nowrap;
+}
+
+.menu-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-nav-links a {
+    color: #aaa;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    transition: color .25s ease,
+                transform .25s ease;
+}
+
+.menu-nav-links a:hover {
+    color: white;
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   PORTADA
+   ===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #353535 0%,
+            #1d1d1d 42%,
+            #090909 100%
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid rgba(255,255,255,.10);
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+}
+
+
+/* =====================================================
+   LOGO HAMBURGUESA
+   ===================================================== */
+
+.burger-logo {
+    width: 115px;
+    height: 85px;
+
+    margin: 0 auto 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    filter: drop-shadow(0 8px 14px rgba(0,0,0,.35));
+}
+
+.burger-top {
+    width: 92px;
+    height: 31px;
+
+    background: #eeeeee;
+
+    border-radius: 55px 55px 12px 12px;
+
+    position: relative;
+
+    border-bottom: 5px solid #a9a9a9;
+}
+
+.burger-top::before {
+    content: "•  • •  •";
+
+    position: absolute;
+
+    top: 7px;
+    left: 24px;
+
+    color: #777;
+
+    font-size: 8px;
+    letter-spacing: 4px;
+}
+
+.burger-layer {
+    width: 90px;
+    margin-top: 3px;
+}
+
+.burger-cheese {
+    height: 7px;
+
+    background: #bdbdbd;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        94% 100%,
+        82% 35%,
+        70% 100%,
+        55% 35%,
+        40% 100%,
+        25% 35%,
+        10% 100%
+    );
+}
+
+.burger-meat {
+    height: 18px;
+
+    background: #4a4a4a;
+
+    border-radius: 4px;
+}
+
+.burger-bottom {
+    height: 11px;
+
+    background: #d1d1d1;
+
+    border-radius: 3px 3px 10px 10px;
+
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   TEXTO PORTADA
+   ===================================================== */
+
+.small-title {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #999;
+
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 14vw, 90px);
+
+    line-height: .95;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    color: white;
+
+    width: 100%;
+}
+
+.hero-line {
+    width: 55px;
+    height: 1px;
+
+    background: #777;
+
+    margin: 22px auto 17px;
+}
+
+.hero h2 {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    color: #bdbdbd;
+}
+
+.hero-text {
+    margin: 21px auto 0;
+
+    max-width: 400px;
+
+    color: #d0d0d0;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   BOTÓN
+   ===================================================== */
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 28px;
+
+    background: white;
+
+    color: #111;
+
+    padding: 15px 29px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    transition: .25s;
+}
+
+.hero-button:hover {
+    background: #d0d0d0;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CATEGORÍAS
+   ===================================================== */
+
+.categories {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 75px 20px;
+}
+
+.section-title,
+.info-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.section-title span,
+.info-title span,
+.menu-heading > span {
+    color: #999;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.section-title h2,
+.info-title h2 {
+    font-size: 31px;
+
+    letter-spacing: -1px;
+}
+
+.section-description {
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* tarjetas */
+
+.categorias {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    max-width: 1000px;
+
+    margin: 40px auto 0;
+
+    padding: 0;
+}
+
+.categoria {
+    position: relative;
+
+    height: 190px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        filter .35s ease;
+}
+
+.categoria:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+    filter: brightness(1.08);
+}
+
+.categoria-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.05)
+        );
+
+    transition: .35s ease;
+}
+
+.categoria:hover .categoria-overlay {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.85),
+            rgba(0,0,0,.15)
+        );
+}
+
+.categoria h3 {
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOTOS
+   ===================================================== */
+
+.categoria-burgers {
+    background-image:
+        url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85");
+}
+
+.categoria-entrantes {
+    background-image:
+        url("https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1200&q=85");
+}
+
+.categoria-aperitivos {
+    background-image:
+        url("https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1200&q=85");
+}
+
+.categoria-bebidas {
+    background-image:
+        url("https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1200&q=85");
+}
+
+.categoria-postres {
+    background-image:
+        url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* =====================================================
+   CARTA
+   ===================================================== */
+
+.menu {
+    width: 100%;
+}
+
+.menu-section {
+    padding: 80px max(20px, calc((100% - 1000px) / 2));
+
+    scroll-margin-top: 70px;
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.menu-section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.dark-section {
+    background: #111;
+
+    color: white;
+}
+
+.menu-heading {
+    margin-bottom: 35px;
+}
+
+.menu-heading h2 {
+    font-size: clamp(30px, 7vw, 48px);
+
+    letter-spacing: -2px;
+
+    margin-top: 5px;
+}
+
+.menu-heading p {
+    margin-top: 7px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+.dark-section .menu-heading p {
+    color: #777;
+}
+
+
+/* =====================================================
+   PLATOS
+   ===================================================== */
+
+.menu-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+
+    border-top: 1px solid #ccc;
+}
+
+.dark-section .menu-list {
+    border-color: #333;
+}
+
+.menu-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 23px 5px;
+
+    border-bottom: 1px solid #d2d2d2;
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+}
+
+.dark-section .menu-item {
+    border-color: #333;
+}
+
+.menu-item.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.menu-item h3 {
+    font-size: 16px;
+
+    margin-bottom: 6px;
+}
+
+.menu-item p {
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    max-width: 600px;
+}
+
+.dark-section .menu-item p {
+    color: #888;
+}
+
+.menu-item strong {
+    white-space: nowrap;
+
+    font-size: 15px;
+}
+
+.featured {
+    background: rgba(0,0,0,.04);
+
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.dark-section .featured {
+    background: #181818;
+}
+
+.tag {
+    display: inline-block;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 800;
+
+    padding: 4px 7px;
+
+    background: #111;
+
+    color: white;
+
+    margin-bottom: 8px;
+}
+
+.dark-section .tag {
+    background: white;
+
+    color: #111;
+}
+
+
+/* =====================================================
+   BEBIDAS
+   ===================================================== */
+
+.drink-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.drink-card {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 0 18px 25px;
+
+    overflow: hidden;
+}
+
+.drink-photo {
+    height: 145px;
+
+    margin: 0 -18px 20px;
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.drink-refrescos .drink-photo {
+    background-image:
+        url("https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85");
+}
+
+.drink-agua .drink-photo {
+    background-image:
+        url("https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=900&q=85");
+}
+
+.drink-cerveza .drink-photo {
+    background-image:
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85");
+}
+
+.drink-card h3 {
+    font-size: 15px;
+}
+
+.drink-card p {
+    margin-top: 7px;
+
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.price-note {
+    margin-top: 20px;
+
+    font-size: 11px;
+
+    color: #888;
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+   ===================================================== */
+
+.info {
+    background: #e6e6e4;
+
+    padding: 80px 20px;
+}
+
+.info-title {
+    max-width: 1000px;
+
+    margin: 0 auto 40px;
+}
+
+.info-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.info-card {
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 30px;
+}
+
+.info-symbol {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 58px;
+
+    height: 28px;
+
+    border: 1px solid #ccc;
+
+    color: #666;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.info-card h3 {
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.info-card p {
+    margin-top: 12px;
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.info-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    border: 1px solid #111;
+
+    padding: 11px 15px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition: .25s;
+}
+
+.info-button:hover {
+    background: #111;
+
+    color: white;
+}
+
+.social-note {
+    display: block;
+
+    margin-top: 18px;
+
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    background: #080808;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.footer-logo {
+    font-size: 34px;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+footer p {
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.footer-line {
+    width: 50px;
+
+    height: 1px;
+
+    background: #555;
+
+    margin: 30px auto;
+}
+
+footer small {
+    color: #555;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   MÓVIL
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .header {
+        padding: 18px 15px;
+    }
+
+    .logo strong {
+        font-size: 32px;
+    }
+
+
+    /* barra */
+
+    .menu-nav {
+        padding: 12px 14px;
+
+        gap: 17px;
+    }
+
+    .menu-nav-logo {
+        font-size: 15px;
+    }
+
+    .menu-nav-links {
+        gap: 18px;
+    }
+
+    .menu-nav-links a {
+        font-size: 9px;
+    }
+
+
+    /* portada */
+
+    .hero {
+        min-height: 620px;
+
+        padding: 45px 18px;
+    }
+
+    .hero::before {
+        width: 370px;
+        height: 370px;
+    }
+
+    .hero::after {
+        width: 285px;
+        height: 285px;
+    }
+
+    .burger-logo {
+        transform: scale(.9);
+
+        margin-bottom: 22px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+
+        letter-spacing: -2px;
+
+        white-space: nowrap;
+    }
+
+    .hero h2 {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+
+        max-width: 320px;
+    }
+
+
+    /* categorías */
+
+    .categories {
+        padding: 55px 16px;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .categoria {
+        height: 160px;
+    }
+
+    .categoria h3 {
+        font-size: 22px;
+    }
+
+
+    /* carta */
+
+    .menu-section {
+        padding: 65px 18px;
+
+        scroll-margin-top: 58px;
+    }
+
+    .menu-item {
+        align-items: flex-start;
+    }
+
+    .menu-item strong {
+        font-size: 14px;
+    }
+
+
+    /* bebidas */
+
+    .drink-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* información */
+
+    .info {
+        padding: 60px 16px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   ESCRITORIO
+   ===================================================== */
+
+@media (min-width: 800px) {
+
+    .categorias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 88px;
+    }
+
+}
